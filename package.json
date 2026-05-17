@@ -1,0 +1,51 @@
+{
+  "name": "node-cache-shield",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A high-performance TypeScript caching utility featuring cache-stampede (thundering herd) protection and seamless Redis integration for Node.js applications.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/test.js",
+    "debug": "npm run build && node --enable-source-maps --inspect-brk dist/test.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "cache",
+    "redis",
+    "typescript",
+    "dedupe",
+    "cache-shield"
+  ],
+  "author": "Kowsalya Thirugnanam",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kowsalyaThirugnanam/node-cache-shield.git"
+  },
+  "homepage": "https://github.com/kowsalyaThirugnanam/node-cache-shield#readme",
+  "bugs": {
+    "url": "https://github.com/kowsalyaThirugnanam/node-cache-shield/issues"
+  },
+  "dependencies": {
+    "redis": "^5.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.8.0",
+    "@types/redis": "^4.0.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "prepublishOnly": "npm run build"
+}
