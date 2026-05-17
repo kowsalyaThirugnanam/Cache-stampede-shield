@@ -27,6 +27,7 @@ export class NodeCacheShield {
             }
         }
 
+        // 2. Check local waiting room for active promises
         const pendingPromise = this.pendingRequests.get(key);
         if (pendingPromise) {
             console.log(`[Shield] Cache MISS for key: "${key}" | Attaching to active Promise.`);
