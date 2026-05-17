@@ -1,7 +1,7 @@
 {
   "name": "node-cache-shield",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A high-performance TypeScript caching utility featuring cache-stampede (thundering herd) protection and seamless Redis integration for Node.js applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
