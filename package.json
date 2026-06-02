@@ -1,8 +1,8 @@
 {
-  "name": "node-cache-shield",
+  "name": "cache-stampede-shield",
   "type": "module",
-  "version": "1.0.1",
-  "description": "A high-performance TypeScript caching utility featuring cache-stampede (thundering herd) protection and seamless Redis integration for Node.js applications.",
+  "version": "1.0.2",
+  "description": "A lightweight request-collapsing mechanism to prevent cache stampedes and thundering herd problems in Node.js.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -32,11 +32,11 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kowsalyaThirugnanam/node-cache-shield.git"
+    "url": "https://github.com/kowsalyaThirugnanam/cache-stampede-shield.git"
   },
-  "homepage": "https://github.com/kowsalyaThirugnanam/node-cache-shield#readme",
+  "homepage": "https://github.com/kowsalyaThirugnanam/cache-stampede-shield#readme",
   "bugs": {
-    "url": "https://github.com/kowsalyaThirugnanam/node-cache-shield/issues"
+    "url": "https://github.com/kowsalyaThirugnanam/cache-stampede-shield/issues"
   },
   "dependencies": {
     "redis": "^5.12.1"
