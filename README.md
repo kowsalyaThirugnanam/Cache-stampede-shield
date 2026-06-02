@@ -1,8 +1,18 @@
-# node-cache-shield
+# cache-stampede-shield
 
-A small TypeScript cache shield for Redis and in-process request deduplication.
+A lightweight request-collapsing mechanism to prevent cache stampedes and thundering herd problems in Node.js.
+
+> Note: This package has been renamed to `cache-stampede-shield`. The `node-cache-shield` package is deprecated — please install the new package instead.
 
 ## Install
+
+Install the renamed package (recommended):
+
+```bash
+npm install cache-stampede-shield
+```
+
+If you must continue using the old package (deprecated):
 
 ```bash
 npm install node-cache-shield
@@ -10,14 +20,24 @@ npm install node-cache-shield
 
 ## Usage
 
+Using the new package name:
+
 ```ts
-import { NodeCacheShield } from 'node-cache-shield';
+import { NodeCacheShield } from 'cache-stampede-shield';
 
 const shield = new NodeCacheShield(redisClient);
 
 const result = await shield.fetch('dashboard_metrics', async () => {
   return fetchDatabaseMetrics();
 }, 60);
+```
+
+Or using the legacy package name (behavior is the same):
+
+```ts
+import { NodeCacheShield } from 'node-cache-shield';
+
+// same usage as above
 ```
 
 ## API
@@ -44,3 +64,7 @@ npm run start
 ```bash
 npm run debug
 ```
+
+## License
+
+MIT

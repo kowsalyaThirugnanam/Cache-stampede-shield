@@ -1,7 +1,7 @@
 {
   "name": "cache-stampede-shield",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight request-collapsing mechanism to prevent cache stampedes and thundering herd problems in Node.js.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
